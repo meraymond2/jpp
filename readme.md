@@ -2,6 +2,21 @@
 
 Fast, no-allocation, streaming, compact JSON pretty-printing CLI.
 
+```
+echo '{"array":[1,2,3],"boolean":true,"color":"gold","null":null,"number":123,"object":{"a":"b","c":"d"},"string":"Hello World"}' | jpp
+
+# prints
+{
+  "array": [1, 2, 3],
+  "boolean": true,
+  "color": "gold",
+  "null": null,
+  "number": 123,
+  "object": {"a": "b", "c": "d"},
+  "string": "Hello World"
+}
+```
+
 ## Building
 Clone the repo and run `zig build -Drelease-safe=true`.
 
